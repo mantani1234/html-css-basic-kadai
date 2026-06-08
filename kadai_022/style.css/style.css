@@ -22,7 +22,7 @@ h1 {
 }
 
 .contents {
-    width: 25%;
+    flex-basis: 25%;
     border: 4px solid #e8cfcf;
     text-align: center;
     padding: 20px;
@@ -39,26 +39,48 @@ h2::before {
     color: #ea6b86;
 }
 
+.contents p:nth-of-type(2)::first-letter{
+    font-weight:bold;
+    color:rgb(97,206,249);
+
+}
 p {
     font-size: 25px;
 }
 
-p:nth-of-type(2) {
-    color: skyblue;
-}
-
 img {
-    width: 80%;
+    width: 70%;
     margin-top: 20px;
 }
 
 footer {
     background-color: #ff5252;
     text-align: center;
-    padding: 15px 0;
 }
 
 footer a {
     color: white;
-    font-size: 30px;
+}
+
+footer a:visited{
+    color: rgb(193,234,251);
+}
+
+footer a:hover{
+    color:rgb(245,178,168);
+}
+
+@media screen and (max-width:768px){
+    h2{
+        font-size:30px;
+    }
+
+    p{
+        font-size:25px;
+    }
+
+    #parent{
+        flex-direction:column;
+    }
+
 }
